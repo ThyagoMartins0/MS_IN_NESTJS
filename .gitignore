@@ -1,7 +1,12 @@
-# compiled output
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Compiled output
 /dist
-/node_modules
 /build
+/out
 
 # Logs
 logs
@@ -14,6 +19,7 @@ lerna-debug.log*
 
 # OS
 .DS_Store
+Thumbs.db
 
 # Tests
 /coverage
@@ -35,16 +41,18 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# dotenv environment variable files
+# Environment variables
 .env
+.env.local
+.env.*.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
 
-# temp directory
-.temp
-.tmp
+# Temp directories
+.temp/
+.tmp/
+.cache/
 
 # Runtime data
 pids
@@ -52,9 +60,5 @@ pids
 *.seed
 *.pid.lock
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-* text=auto eol=lf
-*.{cmd,[cC][mM][dD]} text eol=crlf
-*.{bat,[bB][aA][tT]} text eol=crlf
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json 
