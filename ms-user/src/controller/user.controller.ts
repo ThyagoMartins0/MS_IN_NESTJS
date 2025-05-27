@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { AppService } from '../service/app.service';
+import { UserService } from '../service/user.service';
 
 @Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+export class UserController {
+  constructor(private readonly appService: UserService) {}
 
   @Post('createUser')
   createUser(@Body()body): string {
